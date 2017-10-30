@@ -1,0 +1,19 @@
+﻿@model ManageAccountViewModel
+
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+
+<h2>Manage your account</h2>
+
+<h3>Rewards number</h3>
+<p>@Model.RewardsNumber</p>
+
+<h3>Link social accounts</h3>
+
+@if (Model.FacebookLinked)
+{
+    <p class="text-success">Your Facebook account is linked and can be used to log in</p>
+}
+else
+{
+    <a asp-controller="Account" asp-action="Link" asp-route-idp="@Configuration["okta:FacebookIdp"]">Link your Facebook account</a>
+}
