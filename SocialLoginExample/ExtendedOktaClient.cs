@@ -8,7 +8,7 @@ using Okta.Sdk.Configuration;
 
 namespace SocialLoginExample
 {
-    // Quick hack to add a GetCollection method to OktaClient
+    // Add a GetCollection method to OktaClient
     // (after SDK 1.0.0-alpha4 this won't be necessary)
     public class ExtendedOktaClient : OktaClient
     {
