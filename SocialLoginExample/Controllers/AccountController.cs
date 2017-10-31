@@ -132,11 +132,7 @@ namespace SocialLoginExample.Controllers
                 {
                     Activate = true,
                     Password = model.Password,
-                    Profile = profile,
-                    // Setting a security question bypasses the Okta prompt
-                    // for a security question on first login
-                    RecoveryQuestion = "ResetKey",
-                    RecoveryAnswer = Guid.NewGuid().ToString()
+                    Profile = profile
                 });
             }
             catch (OktaApiException oaex)
